@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background: #f4f6f9;
+    color: #333;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #1a1a1a;
+}
+
+header p {
+    margin-top: 10px;
+}
+
+header a {
+    text-decoration: none;
+    color: #0056b3;
+    font-weight: bold;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+
+section {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+h2 {
+    margin-bottom: 10px;
+    color: #003366;
+    border-bottom: 2px solid #003366;
+    padding-bottom: 5px;
+}
+
+h3 {
+    margin-top: 10px;
+    color: #444;
+}
+
+
+ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 6px;
+}
+
+
+section ul li a {
+    text-decoration: none;
+    color: #0056b3;
+    font-weight: bold;
+}
+
+section ul li a:hover {
+    color: #003366;
+}
+
+/* MOBILE LAYOUT (Default) - Target: 412px */
+
+/* Single column stacked layout */
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* DESKTOP LAYOU - Target: 1920px */
+@media (min-width: 900px) {
+
+    body {
+        padding: 40px;
+    }
+
+    header {
+        text-align: left;
+        margin-bottom: 40px;
+    }
+
+    header h1 {
+        font-size: 3rem;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 30px;
+    }
+
+    /* Make Projects & Skills appear on right side */
+    section:nth-child(4),
+    section:nth-child(5) {
+        grid-column: 2;
+    }
+
+    section:nth-child(1),
+    section:nth-child(2),
+    section:nth-child(3) {
+        grid-column: 1;
+    }
+}
