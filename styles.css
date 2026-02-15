@@ -121,3 +121,34 @@ main {
         grid-column: 1;
     }
 }
+
+
+/* project pages styling */
+
+/* PROJECT PAGE IMAGE STYLING */
+img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin-top: 15px;
+}
+
+/* Center images on mobile */
+section img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* PROJECT PAGE DESKTOP LAYOUT */
+@media (min-width: 900px) {
+
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    main section {
+        padding: 30px;
+    }
+}
